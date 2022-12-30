@@ -1,0 +1,144 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading{
+    
+    font-size: 3vw;
+    
+    background-color: rgb(206, 176, 235);
+    color: white;
+    padding: 0.3vw;
+    margin-bottom: 5vw;
+    
+    
+}
+
+
+
+.container{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:2vw
+}
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    
+
+
+}
+
+.boxes{
+    display: flex;
+    border: 3px solid rgb(168, 117, 168);
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+   
+
+}
+
+.boxes:hover{
+    background-color: rgb(208, 175, 240);
+}
+
+.box-text{
+    font-size: 5vw;
+}
+
+img{
+    width:0vw;
+    transition:width 0.8s;
+}
+
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.turn{
+    font-size: 3vw;
+    display: block;
+    width:208px;
+}
+
+.reset-btn{
+    color: white;
+    padding: 0.5vw 1vw;
+    background-color: rgb(136, 116, 155);
+    border: none;
+    border-radius: 0.3vw;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.reset-btn:hover{
+    background-color: rgb(161, 104, 214);
+}
+
+
+.l{
+    border-left: 6px solid rgb(168, 117, 168);
+}
+
+.r{
+    border-right: 6px solid rgb(168, 117, 168);
+}
+
+.t{
+    border-top: 6px solid rgb(168, 117, 168);
+}
+
+.b{
+    border-bottom: 6px solid rgb(168, 117, 168);
+}
+
+
+
+
+
+@media screen and (min-width:300px) and (max-width:750px){
+    .container{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .boxes{
+        border: 1px solid rgb(168, 117, 168);
+    }
+    .l{
+        border-left: 2px solid rgb(168, 117, 168);
+    }
+    
+    .r{
+        border-right: 2px solid rgb(168, 117, 168);
+    }
+    
+    .t{
+        border-top: 2px solid rgb(168, 117, 168);
+    }
+    
+    .b{
+        border-bottom: 2px solid rgb(168, 117, 168);
+    }
+    
+}
+
+
+.hidden-text{
+    display: none;
+    font-size: 5vw;
+    pointer-events: none;
+    opacity: 0.5;
+}
